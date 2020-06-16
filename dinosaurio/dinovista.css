@@ -1,0 +1,38 @@
+input{
+
+
+	font-family: arial,cursive;
+	font-size: 25px;
+
+}
+
+
+select{
+
+font-family: arial,cursive;
+	font-size: 25px;
+	background-image: url('Guerra.jpeg');
+
+
+
+}
+img{
+
+	height: 80%;
+	opacity: 85%;
+	
+	
+	border-radius: 20px;
+}
+
+.bot{
+
+
+	border-radius: 15px;
+	background-color: #E88BFF;
+	color: white;
+}
+body{
+
+	background-color: #BAF72D;
+}

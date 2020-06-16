@@ -1,0 +1,69 @@
+html{
+
+
+	font-family: arial,cursive;
+	font-size: 25px;
+	background-color: #9ACDFF;
+}
+
+input{
+
+	font-family: arial,cursive;
+	font-size: 25px;
+}
+
+select{
+
+font-family: arial,cursive;
+	font-size: 25px;
+
+}
+
+
+.boton{
+
+background-color: #FFF35F;
+color: white;
+border-radius: 10px;
+font-size: 30px;
+
+}
+
+.boton:hover{
+
+background-color: #FFF35F;
+color: #07FF33;
+border-radius: 10px;
+font-size: 30px;
+}
+
+	
+
+.buton2{
+
+color:white ;
+	background-color: #D2FF6B;
+	
+	border-radius: 10px;
+	font-size: 30px;
+	transform: translate(0%,-1000%);
+}
+.buton2:hover{
+
+color:#9BDA0A;
+background-color: #D2FF6B;
+border-radius: 10px;
+font-size: 30px;
+transform: translate(0%,-1000%);
+}
+
+th{
+
+
+	color:white;
+
+}
+th:hover{
+
+	color: #9BDA0A;
+}

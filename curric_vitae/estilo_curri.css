@@ -1,0 +1,251 @@
+/*Integrante: José Trejo
+	 Número de cédula: 26.613.476
+	 trayecto II de informática
+	 Sección: 1, programacion, profesor:César Characo 
+	 U.P.T.A "Federico Brito Figueroa" */
+
+
+
+
+/*Color de fondo de toda la pagina--*/
+/*--*/
+.color_pag{
+  
+	background: linear-gradient(30deg,#0955CD,#22F5F2);
+
+
+
+
+}
+
+
+/*Primera parte de la presentacion de la pagina del curriculum*/
+/*--*/
+.dividir_cab{
+
+	margin-left: 8%;border-radius: 30px;
+	border: solid #88F018;
+	background-color: #88F018;
+	margin-top: 5%;border-width: 5px;
+
+
+}
+
+
+
+	
+
+/*Imagen de la izquierda de la presentacion inicial */
+/*--*/
+.n_filas1{
+
+
+	  height: 160px;width: 255px;
+	  background-image: url('img_casa.jpg');
+	  margin-top: 10%;
+	  border-bottom-right-radius: 20px;
+	 border-top-right-radius:20px;border-top-left-radius: 20px;
+	 border-bottom-left-radius: 20px; 
+
+
+	  
+}
+/*Titulo de la columna central */
+/*--*/
+
+/* id del menu de agregar*/
+
+
+.tit_logo{
+
+  
+  font-weight: bold;font-size:15px; font-family:wide latin;text-transform: capitalize;
+text-align: center;margin-bottom: 5px;color: #DCD2D2;
+}
+/*Subtítulo de la columna central */
+/*--*/
+.subt_logo{
+
+	text-align: center;font-size: 15px;font-family: tahoma;color: white;
+	text-transform: capitalize;margin-bottom: 20px;margin-top: 10px;
+	
+}
+/*Tamaño y color de fondo de la columna central*/
+/*--*/
+.n2_filas2{
+
+height: 160px;width: 285px;
+	 background-color:  #3889E8;
+}
+/*Imagen de la derecha de la presentacion inicial */
+
+
+
+/*--*/
+.nu3_filas3{
+
+	 height: 160px;width: 255px;
+	 
+	 background-image: url('imagen de softwr.jpg');
+	 border-bottom-right-radius: 20px;
+	 border-top-right-radius:20px;border-top-left-radius: 20px;
+	 border-bottom-left-radius: 20px; 
+}
+/*  barra de busqueda del curriculum                            
+*/
+/*--*/
+.busq_cur{
+
+	text-align: center;
+	
+	margin-top: 5%;
+	margin-bottom: 5%; 
+	transform: translate(3%,140%);
+	
+	
+}
+
+/*cabecera de la barra de navegcion*/
+/*--*/
+.barra{
+
+text-align: center;
+height: 100px;
+width: 1000px;margin-top: 9%;
+margin-left: 1%;
+
+border:solid green;border-width: 8px;border-radius: 50px;
+background-color: orange;padding-bottom: 20px;
+}
+
+/*columnas de la cabecera de la entrada al curriculum*/
+/*--*/
+.col_barr1{
+border:solid gray;height: 60px;width: 130px;
+font-size: 13px;
+background-image: url('imagen de softwr.jpg');color: white;
+font-family: times new roman;border-radius: 50px;margin-bottom: 15px;
+transform: translate(0px,5px);
+}
+/*--*/
+
+.col_barr2{
+border:solid violet;height: 60px;width: 130px;color: white;
+font-family: times new roman;background-color: violet;
+font-size: 13px;text-transform: normal;border-radius: 50px;transform: translate(0px,10px);
+}
+/*barra inferior de la barra de navegacion*/
+/*--*/
+.barra_inf{
+
+	text-align: center;
+height: 80px;
+width: 1000px;
+
+margin-bottom: 13%;margin-left: 1%;
+border:solid green;border-width: 8px;border-radius: 20px;
+font-size: 20px;
+}
+
+/*Columnas de la barra inferior*/
+/*--*/
+.colum_binf:hover{
+
+	border:solid violet;height: 20px;width: 30px;
+font-family: times new roman;background-color: #FF8BD7;
+;text-transform: normal;border-radius: 40px;color: white;
+}
+/*--*/
+.Tit_curr{
+
+	font-size:40px; font-family:calibri ;text-transform: capitalize;
+text-align: center;margin-bottom: 10%;color: hsla(120,130%,65%,90%);
+}
+
+
+
+/*Tamaño de cada columna donde estan los titulos de cabecera: alto y ancho y color de fondo;*/
+/*--*/
+.cuer_cole_c{
+
+height: 68px;width: 200px;background-color: background-color: white;margin-right: 2%;
+
+
+}
+
+
+/*Tamaño de la foto*/
+/*--*/
+.foto{
+height: 148px;width: 160px;
+
+background-image: url('jose_photo.jpg');
+}
+/*Tipos y tamaños de las fuentes de cabecera de cada columna*/
+/*--*/
+.conf_tabla1{
+	transform: translate(150%,0%);
+ background-color: #9AF0DE;
+	text-align: center;
+	margin-bottom: 7%;
+}
+/*--*/
+.conf_entra1{
+
+	
+	font-family: times new roman;
+	font-size: 20px;
+
+	
+
+	
+	
+	
+}
+/*--*/
+.conf_entra2{
+
+	
+	font-family: times new roman;
+	font-size: 20px;
+	
+	
+	
+	
+	
+
+	
+	
+	
+}
+/*--*/
+.Entra_preg{
+
+	
+	font-family: times new roman;
+	font-size: 20px;
+	text-align: center;
+	background-color: #9AF0DE;
+	
+	
+
+
+
+	
+	
+	
+}
+
+.light:hover{
+
+background-color: blue;
+}
+
+
+
+
+
+
+
+
+	

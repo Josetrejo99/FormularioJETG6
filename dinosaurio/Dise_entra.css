@@ -1,0 +1,70 @@
+html{
+
+
+	list-style: none;
+	text-align: center;
+font-family: algerian,cursive;
+font-size: 25px;
+background-color: #F8C822;
+
+}
+
+input{
+
+margin-top: 25%;
+
+	font-family: algerian,cursive;
+	font-size: 25px;
+border-radius: 15px;
+background-color: #BBF533;
+margin-bottom: 10%;
+}
+
+input:hover{
+
+	margin-top: 25%;
+
+	font-family: algerian,cursive;
+	font-size: 30px;
+border-radius: 15px;
+color: white;
+background-color: red;
+
+
+
+}
+
+a{
+
+font-family: algerian,cursive;
+	font-size: 30px;
+	
+	color: white;
+
+}
+
+a:hover{
+
+font-family: algerian,cursive;
+	font-size: 35px;
+	color: #F8C822;
+	
+
+
+}
+h1{
+
+font-family: algerian,cursive;
+	font-size: 35px;
+	color: white;
+
+}
+h1:hover{
+
+font-family: algerian,cursive;
+	font-size: 37px;
+	color: #57EE46;
+
+
+}
+
