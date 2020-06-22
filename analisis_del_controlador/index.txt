@@ -1,0 +1,116 @@
+Analisis del controlador:
+
+Linea 8:
+
+ Se está aperturando un método público llamado index de la cual se puede mandar a llamar desde cualquier parte
+del documento,ya sea interna o externa de la clase contenedora de este método.
+
+Linea 9:
+
+ Se está instanciando una clase llamada clasedb con una variable llamada $db,que es el objeto.Por lo cual,se puede tener
+acceso a todo el contenido de la clasedb por medio de la variable $db,ya que esta tiene almacenada todo el contenido de la clasedb.
+
+Linea 10:
+
+De la variable $db anteriormente mencionada,se está accediendo a una funcion de la clasedb llamada
+conectar, la cual va a retornar una respuesta de la conexion con el servidor y la base de datos que se está consultando.
+Si no encuentra errores en la conexión,devuelve true (verdadero),sino puede devorvel false (falso),
+o tambien puede devolver una cadena de caracteres, que por ejemplo diga "error al conectar con la base de datos".
+Y todo esto se almacenando en una variable llamada $conex.
+
+Linea 12:
+
+Se está extrayendo todos los valores de la tabla datos_personales de la base de datos,con la consulta SELECT * FROM, y se está almacenando en la variable $sql.
+
+Linea 14:
+
+ La función mysqli_query está extrayendo los datos solicitados por la consulta SELECT,almacenada en la variable
+$sql y en sus parámetros tambien contiene la respuesta de la conexion con el servidor almacenada en la variable conex.Esta funcion
+devuelve un identificador de resultado que contiene la información necesaria para encontrar la ubicación temporal donde los
+datos están almacenados, luego se está asignando toda la información en la variable $res,que contiene la respuesta.Si la 
+consulta falla devuelve un valor booleano false.
+
+Linea 15:
+
+ La función mysqli_num_fields está devolviendo el numero de de columnas que contiene cada registro de la
+tabla datos_personales, a estas columnas se le llaman campos, porque ellas contienen tipos de valores de datos almacenados,
+las cuales pueden ser enteros,decimales,booleanos,varchar o cadena de caracteres,fecha,etc.El numero de campos devuelto del  
+resultado ubicada en el parámetro de la función, de la variable $res, se está almacenando en la variable $campos.
+
+Linea 16:
+
+ Al contrario de la función mysqli_num_fields explicada anteriormente,la función mysqli_num_rows devuelve el número
+de filas que contiene la tabla datos_personales,es decir las filas son las que las contiene las columnas donde están almacenados
+los datos de la tabla.El valor numérico devuelto se está almacenando en la variable $filas.
+
+Linea 17:
+
+Se está inicializando una variable llamada $i con un valor numérico cero,es decir se está asignando a la variable.
+
+Linea 18:
+
+Se está asociando un array unidimensional con otro,el resultado de esta unión es que se crea un array de dos dimensiones,es
+decir, bidimensional o multidimensional.La cual se forma filas y columnas con este tipo de array.
+
+Linea 20:
+
+Se está utilizando un ciclo while que contiene una condición dentro,la cual es, que mientras se sigan asignado los registros
+o las filas de la tabla datos personales a la variable $data, el ciclo va a seguir funcionando.Cuando no halla registro
+la función mysqli_fetch_array($res) va a devolver un valor booleano false y se va a detener el ciclo.Además se está aperturando una
+entrada abriendo la llave { ,por lo cual el ciclo va a tener otras instrucciones dentro de el.
+
+
+Linea 21:
+
+Se está utlizando un ciclo determinado for la cual en sus parametros se está inicializando la variable $j en cero, se presenta
+una condición la cual es que mientras la variable $j sea menor a la variable $campos del numero de campos de la tabla este ciclo
+va a seguir funcionando,y se está iterando la variable $i para aumentar el valor de la misma en cada vuelta que realice
+el ciclo.Por ultimo se está abriendo apertura con la llave para ejecutar instrucciones.
+
+Linea 22:
+
+Se observa un array unidimensional llamado $data[$j] con la variable $j dentro del corchete
+ marcando el indice o la posición que ocupa el valor del dato almacenado en el array.Luego el valor de este array se está almacenando
+en el array bidimensional llamado $datos[$i][$j],este ultimo forma filas con el corchete [$i] y columnas con [$j],el valor
+que se está almacenando del array $data[$j] se está almacenando en el corchete [$j], ya que el,es el que marca la columna y es
+el que el ciclo está iterando constantemente para almacenar los valores a las columnas del array bidimensional llamado
+$datos[$i][$j].
+
+Linea 23:
+
+Se cierra la apertura de llave del ciclo for anterior.
+
+Linea 24:
+
+Está iterando la variable $i que marca la posicion de la fila del array $datos[$i][$j] del ciclo for anterior.Esto tambien
+marca el numero de registro de la tabla datos_personales.
+
+Linea 25:
+
+Cierre de la apertura de ciclo while con la llave }.
+
+Linea 26:
+
+Se está cerrando la conexión con el servidor de la base de datos con la funcion mysqli_close($conex).
+
+Linea 28:
+
+La función header se está encargando de cargar un documento php llamado index.php y le está enviando por metodo get
+,es decir por la url,lo siguiente:
+Una variable llamada filas que contiene el valor del número de filas de la tabla datos_personales mencionada anteriormente,
+almacenado en la variable $filas.
+Una variable llamada campos que contiene el valor del número de columnas de cada fila de la tabla datos_personales,almacenado
+en la variable $campos.
+Una variable llamada data que va a contener el array bidimensional $datos del ciclo for explicado anteriormente.Con la funcion
+serialize se están serializando los datos.Es decir, se están mandando por la url los datos del array transformado en un
+conjunto de bits,la cual puede ser deserializado en index.php para el uso de los datos del array.
+
+Linea 29:
+
+Fin de la apertura con la llave } del método publico llamdo index,contenedor de todas las instrucciones anteriores.
+
+
+
+
+ 
+
