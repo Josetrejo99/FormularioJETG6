@@ -1,4 +1,4 @@
-Analisis de las funciones modificar y eliminar.
+Analisis de las funciones modificar y actualizar.
 
 Linea 82: Se está dando apertura al método público llamado modificar.
 
