@@ -1,0 +1,178 @@
+Analisis de las funciones modificar y eliminar.
+
+Linea 82: Se está dando apertura al método público llamado modificar.
+
+Línea 83: Se está extrayendo todos los valores que fueron enviados 
+desde otra pagina o otra función a la función modificar.
+
+Linea 84: Se está instanciando la calase llamada clasedb al objeto
+$db, que es la variable que va a contener todos los atributos,valores y
+funciones que posea esta clase.
+
+Linea 85: El objeto $db está mandando a llamar a la función conectar de
+la clasedb ,la función conectar se encarga de realizar la conexión con el
+servidor y la base de datos.Si no hay errores en la conexión devuelve
+true,sino devuelve false o un mensaje de falla en la conexión.Posteriormente,
+la respuesta de la función conectar se está asignando a la variable conex.
+
+Linea 87: Se está almacenando en la variable $sql la setencia para seleccionar
+todos los campos de la tabla datos personales en donde el contenido la variable $id_persona
+se está asignando al id,que es el nombre del campo en la tabla.El id
+es el identificador de la fila,así que solamente se está consultando
+todos los campos de dicha fila en la tabla datos_personales.
+
+Linea 88: Se está almacenando en la variable $res el resultado de la
+ejecución de la sentencia de la variable $sql,es decir,de la consulta en la tabla,y también está
+devolviendo la respuesta de la conexión con el servidor y la base de datos.
+La función mysqli_query se encarga de enviar enviar la operación SQL a la base de datos,esta 
+a su vez puede retornar true o false.Y finalmente
+el resultado resultado es almacenado en la variable $res.
+
+
+Linea 89: La función mysqli_fetch_array está recepcionando en un array asociativo
+todos los valores de los campos del $id_persona de la sentencia ejecutada
+en la variable $res,este array se está asociando a la variable $data.
+La cual ahora en la $data está almacenado todos los valores de los campos del $id_persona de la tabla
+datos_personales , de la sentencia ejecutada anteriormente.Por lo que los valores que contenga los campos de ese $id_persona
+,como por ejemplo nombre,apellido,cedula,se está almacenando en la $data y esta ultima se ha transformado
+en un array unidimensional o de una sola dimensión.
+
+Linea 91: la función header se está encargando de redireccionar o cargar
+automáticamente la página editar.php dentro de sus parámetros.Además
+se está enviando por GET o por la URL la variable data la cual se está
+almacenado los valores serializados del array $data, contenedor de los
+valores de los campos de la sentencia ejecutada anteriormente.
+La función serialize se encarga de serializar los datos,estos pueden ser
+deserializados en editar.php para ser modificados posteriormente en un
+formulario.
+
+Linea 92: Cierre de la función pública modificar.
+
+Linea 93: Se está creando una función pública llamada actualizar.
+
+Linea 94:Se está dando la apertura a la función o método público actualizar.
+
+Linea 95:Se está extrayendo todos los datos de un formulario que los método POST (únicamente).
+Los envios por el método no se envian por la URL.
+
+Linea 96:Se está instanciando la calase llamada clasedb al objeto 
+$db, que nuevamente, es la variable que va a contener todos los atributos,valores y
+funciones que posea esta clase.
+
+Linea 97:Nuevamente, el objeto $db está mandando a llamar a la función conectar de
+la clasedb ,la función conectar se encarga de establecer la conexión con el
+servidor y la base de datos.Si no hay errores en la conexión devuelve
+true,sino devuelve false o un mensaje de falla en la conexión.Posteriormente,
+la respuesta de la función conectar se está asignando a la variable conex.
+
+Linea 99: Se está almacenando  en la variable $sql, la sentencia de la consulta SQL a la base de datos,
+la cual está seleccionando todos los campos de esa fila de la tabla datos_personales, en donde la cédula que está tomando,
+es la cedula que está mandando el usuario desde el formulario de otra página, y tambien lo está
+tomando como id.Ya que en la misma sentencia se muestra que el id tiene que ser distinto o <> a la variable $id_persona.
+Aquí se realiza una busqueda de los datos de los campos que se encuentran en la fila en donde está almacenada el valor de está cédula.
+También funciona en caso de que se quiera ingresar una cédula junto un grupo de datos adicionales, sin que se repita la cédula en las filas.
+Ya que en la vida real la cédula es un dato único de cada persona.
+
+
+Linea 101: Se está almacenando en la variable $res el resultado de la
+ejecución de la sentencia de la variable $sql,es decir,de la consulta de la fila de la tabla,y también está
+devolviendo la respuesta de la conexión con el servidor y la base de datos.
+La función mysqli_query se encarga de enviar la operación SQL a la base de datos.Y dependiendo del
+resultado devuelve un valor true o false.
+
+Linea 102: La función mysqli_num_rows está devolviendo el número de filas
+que contiene la sentencia  $sql de la tabla, la cual se encuentra almacenada en la variable $res.
+La lógica de esta linea de código es que la función está devolviendo un valor
+nulo o de uno,dependiendo si la cédula que ingresó el usuario en el formulario está almacenada en la tabla datos_personales
+o si existe.Si la cédula se encuentra almacenada devuelve 1 sino devuelve 0.Este valor es almacenado en la variable $cant.
+
+Linea 103: Se abre una condicional if que contiene como parámetros que si el
+valor de la variable $cant es mayor a cero se ejecutan las instrucciones contenidas dentro de
+las llaves.
+
+Linea 104: Cierre parcial del script php.
+
+Linea 105: Se abre un script de tipo texto Javascript.
+
+Linea 106: Se muestra una alerta al usuario que la cédula se encuentra
+registrada.Esto demuestra que la condicional de la linea 103 se encarga de dar
+apertura a las instrucciones para mostrarle al usuario que la cédula que ingresó para actualizar, se encuentra
+registrada.Ya que si el valor de $cant es mayor a 0,es porque hay una cédula registrada con el mismo valor que ingresó el usuario.
+Luego se acepta la alerta y se ejecuta la siguiente instrucción.
+
+Linea 107: Se está redireccionando o cargando automáticamente la página PersonasControlador con window.location de JavaScript, y se está enviando por 
+la URL una variable llamada operación que contiene como valor una cadena llamada index,la cual esta última activa 
+la función index.
+
+Linea 108: Cierre del script de Javascript.
+
+Linea 109: Apertura del script php.
+
+Linea 110: Cierre de la condicional if y apertura al caso contrario else.
+
+Linea 111: Se está almacenando en la variable $sql la sentencia de la consulta para actualizar los valores
+de los campos de la fila de la tabla datos personales, en donde el id es igual al valor almacenado en la variable $id_persona.
+La lógica de esta linea es que sino se encuentra registrada la cédula,se toma como id de la fila el valor almacenado en la
+variable $id_persona y se agrega los datos que haya ingresado el usuario en las variables $nombres,$apellidos y $cedula,en el formulario.Y estos
+posteriormente son ingresados en los campos de la tabla en la fila en donde se encuentra el id.
+
+Linea 113: Nuevamente,se está almacenando en la variable $res el resultado de la
+ejecución de la sentencia de la variable $sql,de la linea anterior.
+Es decir,de la consulta de la fila de la tabla datos_personales, para actualizar,y también está
+devolviendo la respuesta de la conexión con el servidor y la base de datos.
+
+Linea 114: Se abre una condicional if que muestra que si el resultado de la query almacenado en la variable
+$res es igual a true se ejecutan las instrucciones dentro de la llave.
+
+Linea 115: Cierre parcial del script de php.
+
+Linea 116: Se abre un script de tipo texto Javascript.
+
+Linea 117: Se muestra una alerta al usuario,que dice que el registro fue modificado,es decir que los datos fueron ingresados en la tabla datos_personales
+de esa base de datos.
+
+Linea 118: Se está redireccionando o cargando automáticamente la página PersonasControlador, y se está enviando por 
+la URL una variable llamada operación que contiene como valor una cadena llamada index,la cual esta última activa 
+la función index.
+
+Linea 119: Cierre del script de Javascript.
+
+Linea 120: Se abre el script de php.
+
+Linea 121: Cierre de la condicional if y apertura al caso contrario else.Es decir si $res es igual a false.
+
+Linea 122:Cierre parcial del script de php.
+
+Linea 123: Se abre un script de tipo texto Javascript.
+
+Linea 124: Se muestra una alerta de error al modificar el registro,esto sucede cuando las sentencias que envia la
+funcion mysqli_query no coinciden con los datos de la base de datos.La query retorna como resultado false.
+
+Linea 125: Se está redireccionando o cargando automáticamente la página PersonasControlador, y se está enviando por 
+la URL una variable llamada operación que contiene como valor una cadena llamada index,la cual esta última activa 
+la función index.
+
+Linea 126: Cierre del script de Javascript.
+
+Linea 127: Se abre el script de php.
+
+Linea 128: Cierre del caso contrario else.
+
+Linea 130: Cierre del caso contrario else de la linea 110.
+
+Linea 131: Cierre de la función pública actualizar.
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
